@@ -1,7 +1,8 @@
+github 无法渲染部分 latex, 或者说它对格式实在太过苛求。
+
 用图解法求解下列线性规划问题，并指出问题是具有唯一最解、无穷多最优解、无界解还是无可行解?
 $\left.\left(1\right)\max z=x_{1}+3x_{2}\\\left\{\begin{array}{l}5x_{1}+10x_{2}\leqslant50\\x_{1}+x_{2}\geqslant1\\x_{2}\leqslant4\\x_{1},x_{2}\geqslant0\end{array}\right.\right.$<br>
 $\begin{aligned}&\left(3\right)\max z=2x_{1}+2x_{2}\\&\left.\left\{\begin{array}{c}x_{1}-x_{2}\geqslant-1\\-0.5x_{1}+x_{2}\leqslant2\\x_{1},x_{2}\geqslant0\end{array}\right.\right.\end{aligned}$<br>
-
 
 $(1)$<br>
 
@@ -30,9 +31,9 @@ $x_{1},x_{2}\geqslant0$<br>
 ·顶点 A: $x_1$轴与 L2 的交点。当$x_2=0$时，由$x_1+x_2=1\Longrightarrow x_1=1.$所以 A=(1,0)。
 ·顶点 B: $x_1$轴与 L1 的交点。当$x_2=0$时，由$5x_1+10x_2=50\implies5x_1=50\implies x_1=10.$<br>
 所以 B=(10,0)。
-·顶点 C:L1与 L3 的交点。由$x_{2}=4$代入$5x_1+ 10x_2= 50\Longrightarrow 5x_1+ 40= 50$ $\Longrightarrow 5x_1=10\implies x_{1}=2.$所以 C=$(2,4)_{\circ}$<br>
-·顶点D：$x_{2}$轴与L3 的交点。当$x_1=0$时，由$x_{2}=4.$所以 D=(0,4)。
-·顶点E：$x_2$ 轴与 L2 的交点。当$x_1=0$ 时，由$x_1+x_2=1\Longrightarrow x_2=1$.所以 E=(0,1)。
+·顶点 C:L1 与 L3 的交点。由$x_{2}=4$代入$5x_1+ 10x_2= 50\Longrightarrow 5x_1+ 40= 50$ $\Longrightarrow 5x_1=10\implies x_{1}=2.$所以 C=$(2,4)_{\circ}$<br>
+·顶点 D：$x_{2}$轴与 L3 的交点。当$x_1=0$时，由$x_{2}=4.$所以 D=(0,4)。
+·顶点 E：$x_2$ 轴与 L2 的交点。当$x_1=0$ 时，由$x_1+x_2=1\Longrightarrow x_2=1$.所以 E=(0,1)。
 
 可行域的顶点是：A(1,0), B(10,0), C(2,4), D(0,4), E(0,1)。
 
@@ -56,5 +57,5 @@ $(3)$<br>
 
 $\max z=2x_{1}+2x_{2}$<br>
 $\text{s.t. } x_{1}-x_{2}\geqslant-1 \quad (\text{L1})$<br>
-$-0.5x_{1}+x_{2}\leqslant2 \quad (\text{L2})$ 
+$-0.5x_{1}+x_{2}\leqslant2 \quad (\text{L2})$
 $x_{1},x_{2}\geqslant0$<br>
