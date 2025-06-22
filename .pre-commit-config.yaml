@@ -1,0 +1,11 @@
+# .pre-commit-config.yaml
+repos:
+  - repo: local
+    hooks:
+      - id: add-br-after-dollar-md
+        name: Add <br> after dollar sign in Markdown
+        entry: python hooks/add_br_to_dollar.py
+        language: system # 表示使用系统上安装的 python
+        # 移除 types 字段，使其不局限于特定语言类型
+        stages: [commit] # 只在 commit 阶段运行
+        files: \.(md|markdown|mdown)$ # 仅限 .md, .markdown 或 .mdown 文件
