@@ -6,11 +6,12 @@
 
 首先是架构:
 
-![[chatterbot_design.png]]
+
+![chatterbot_workflow.png](../dist/img/chatterbot_design.png)
 
 然后是流程图:
 
-![[chatterbot_workflow.png]]
+![chatterbot_workflow](../dist/img/chatterbot_workflow.png)
 
 这里的路径主要是边端实物端，加了关键词检测(KWS)和语音活动检测(VAD), 用来自动唤醒模型。
 而 Web 端则是把原本直接语音唤醒功能换成了文字输入和手动的麦克风开启和关闭。
