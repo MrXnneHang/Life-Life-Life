@@ -38,32 +38,40 @@ https://github.com/Termix-SSH/Termix
 
 首先，安装一些必要的软件包：
 
+> 如果系统过老可以 `apt upgrade` 进行升级系统，但是新机建议直接重装。
+
 ```shell
-apt updateapt upgrade -yapt install curl vim wget gnupg dpkg apt-transport-https lsb-release ca-certificates
+apt update
+apt install curl vim wget gnupg dpkg apt-transport-https lsb-release ca-certificates
 ```
 
 然后加入 Docker 的 GPG 公钥和 apt 源：
 
 ```shell
-curl -sSL https://download.docker.com/linux/debian/gpg | gpg --dearmor > /usr/share/keyrings/docker-ce.gpgecho "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-ce.gpg] https://download.docker.com/linux/debian $(lsb_release -sc) stable" > /etc/apt/sources.list.d/docker.list
+curl -sSL https://download.docker.com/linux/debian/gpg | gpg --dearmor > /usr/share/keyrings/docker-ce.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-ce.gpg] https://download.docker.com/linux/debian $(lsb_release -sc) stable" > /etc/apt/sources.list.d/docker.list
+
 ```
 
 国内机器可以用清华 TUNA 的国内源：
 
 ```shell
-curl -sS https://download.docker.com/linux/debian/gpg | gpg --dearmor > /usr/share/keyrings/docker-ce.gpgecho "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-ce.gpg] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian $(lsb_release -sc) stable" > /etc/apt/sources.list.d/docker.list
+curl -sS https://download.docker.com/linux/debian/gpg | gpg --dearmor > /usr/share/keyrings/docker-ce.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-ce.gpg] https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/debian $(lsb_release -sc) stable" > /etc/apt/sources.list.d/docker.list
+
 ```
 
 然后更新系统后即可安装 Docker CE
 
 ```shell
-apt updateapt install docker-ce docker-ce-cli containerd.io
+apt install docker-ce docker-ce-cli containerd.io
 ```
 
 我们可以使用 Docker 官方发布的 Github 直接安装最新版本docker-compose：
 
 ```shell
-curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-Linux-x86_64 > /usr/local/bin/docker-composechmod +x /usr/local/bin/docker-compose
+curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-Linux-x86_64 > /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
 ```
 
 此时可使用 `docker-compose version` 命令检查是否安装成功
